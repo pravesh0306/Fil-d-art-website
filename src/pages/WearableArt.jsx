@@ -154,7 +154,11 @@ const WearableArt = () => {
                   </div>
                   <div className="product-info">
                     <h3>{product.name}</h3>
-                    <p className="category">{product.category}</p>
+                    <p className="category">
+                      {product.category === 'jackets' && product.name.toLowerCase().includes('shirt')
+                        ? 'Shirts'
+                        : product.category}
+                    </p>
                   </div>
                 </Link>
               </motion.div>

@@ -34,13 +34,6 @@ const Footer = () => {
           <Link to="/">FIL D'ART</Link>
         </div>
 
-        <div className="footer-links">
-          <Link to="/wearable-art">Wearable Art</Link>
-          <Link to="/canvas-art">Canvas Art</Link>
-          <Link to="/custom-orders">Custom Bespoke</Link>
-          <Link to="/collaborations">Collaborations</Link>
-          <Link to="/care-instructions">Care Instructions</Link>
-        </div>
 
         <div className="footer-social">
           <a href="https://www.instagram.com/fildart.customshop" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -93,22 +86,12 @@ const Footer = () => {
 
         .footer-logo {
           font-family: var(--font-serif);
-          font-size: 1.5rem;
+          font-size: 4rem;
           letter-spacing: 0.1em;
+          margin-bottom: 1rem;
         }
 
-        .footer-links {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 2rem;
-        }
-
-        .footer-links a {
-          font-size: 0.9rem;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-        }
+        .footer-social {
 
         .footer-social {
           display: flex;

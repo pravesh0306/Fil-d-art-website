@@ -65,7 +65,7 @@ export const wearableProducts = [
   },
   {
     id: 3,
-    name: 'The Off-Road Gypsy',
+    name: 'The Off-Road Gypsy T-Shirt',
     category: 'jackets',
     price: 'Custom',
     image: fashion3,
@@ -92,7 +92,7 @@ export const wearableProducts = [
   },
   {
     id: 6,
-    name: 'Innocent Wonder',
+    name: 'Innocent Wonder Shirt',
     category: 'jackets',
     price: 'Custom',
     image: fashion6,
@@ -182,7 +182,7 @@ export const wearableProducts = [
   },
   {
     id: 16,
-    name: 'The Solitary Path',
+    name: 'The Solitary Path Shirt',
     category: 'jackets',
     price: 'Custom',
     image: fashion16,

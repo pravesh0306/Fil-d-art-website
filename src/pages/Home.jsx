@@ -352,8 +352,9 @@ const Home = () => {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          opacity: 0.3;
-          transform: scale(1.3);
+          opacity: 0.1;
+          transform: scale(2.5);
+          transform-origin: center 75%; /* Focus on lower part (hands/table) */
         }
 
         .hero-overlay {

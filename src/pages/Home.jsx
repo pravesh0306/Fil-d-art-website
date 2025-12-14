@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { wearableProducts, canvasArtworks } from '../data';
+import { wearableProducts, canvasArtworks, journalPosts } from '../data';
 import julieReview from '../assets/julie-review.jpg';
 
 const Home = () => {
@@ -114,6 +114,32 @@ const Home = () => {
             <h2>Get Your Custom Piece</h2>
             <p>Collaborate to create a unique wearable masterpiece or fine art commission.</p>
             <Link to="/custom-orders" className="btn">Start Customizing</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Journal Section */}
+      <section className="section journal-section">
+        <div className="container">
+          <div className="section-header text-center">
+            <h2 className="section-title">From the Journal</h2>
+            <p className="section-subtitle">Stories, process, and inspiration behind the art.</p>
+          </div>
+
+          <div className="journal-grid">
+            {journalPosts.map((post) => (
+              <Link to={`/journal/${post.id}`} key={post.id} className="journal-card">
+                <div className="journal-image">
+                  <img src={post.image} alt={post.title} loading="lazy" />
+                </div>
+                <div className="journal-content">
+                  <span className="journal-date">{post.date}</span>
+                  <h3>{post.title}</h3>
+                  <p>{post.excerpt}</p>
+                  <span className="read-more">Read Story &rarr;</span>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -599,8 +625,84 @@ const Home = () => {
             font-size: 1.5rem;
           }
         }
+
+        .journal-section {
+          padding: 5rem 0;
+          background-color: #fafafa;
+        }
+
+        .journal-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2.5rem;
+        }
+
+        .journal-card {
+          display: block;
+          background: white;
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .journal-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .journal-image {
+          height: 240px;
+          overflow: hidden;
+        }
+
+        .journal-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.6s ease;
+        }
+
+        .journal-card:hover .journal-image img {
+          transform: scale(1.05);
+        }
+
+        .journal-content {
+          padding: 1.5rem;
+        }
+
+        .journal-date {
+          display: block;
+          font-size: 0.8rem;
+          color: #888;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          margin-bottom: 0.5rem;
+        }
+
+        .journal-content h3 {
+          font-family: var(--font-serif);
+          font-size: 1.25rem;
+          margin-bottom: 0.8rem;
+          line-height: 1.3;
+        }
+
+        .journal-content p {
+          font-size: 0.95rem;
+          opacity: 0.7;
+          line-height: 1.6;
+          margin-bottom: 1.2rem;
+        }
+
+        .read-more {
+          font-size: 0.85rem;
+          font-weight: 600;
+          color: var(--color-text);
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
       `}</style>
-    </div>
+    </div >
   );
 };
 

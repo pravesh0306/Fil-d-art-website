@@ -2,45 +2,118 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const CareInstructions = () => {
+  // Action-specific animations
+  const spinAnimation = {
+    rotate: 360,
+    transition: { duration: 8, repeat: Infinity, ease: "linear" }
+  };
+
+  const ironAnimation = {
+    x: [-15, 15, -15],
+    transition: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+  };
+
+  const breezeAnimation = {
+    rotate: [5, -5, 5],
+    transition: { duration: 3, repeat: Infinity, ease: "easeInOut" }
+  };
+
+  const paintAnimation = {
+    x: [-3, 3, -3],
+    y: [2, -2, 2],
+    rotate: [-5, 5, -5],
+    transition: { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
+  };
+
+  const sunAnimation = {
+    rotate: 360,
+    scale: [1, 1.1, 1],
+    transition: {
+      rotate: { duration: 12, repeat: Infinity, ease: "linear" },
+      scale: { duration: 3, repeat: Infinity, ease: "easeInOut" }
+    }
+  };
+
+  const sprayAnimation = {
+    rotate: [0, -10, 0],
+    transition: { duration: 1, repeat: Infinity, ease: "easeInOut" }
+  };
+
+  const pulseAnimation = {
+    scale: [1, 1.1, 1],
+    transition: { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
+  };
+
+  const wipeAnimation = {
+    x: [-5, 5, -5],
+    transition: { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
+  };
+
+  const dripAnimation = {
+    y: [-5, 5, -5],
+    transition: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+  };
+
   // SVG Icon Components
   const WashIcon = () => (
-    <svg viewBox="0 0 64 64" className="care-icon">
+    <motion.svg
+      viewBox="0 0 64 64"
+      className="care-icon"
+      animate={spinAnimation}
+    >
       <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" strokeWidth="2" />
       <path d="M20 32 Q32 20, 44 32 Q32 44, 20 32 Z" fill="currentColor" opacity="0.2" />
       <path d="M28 26 Q32 22, 36 26" stroke="currentColor" strokeWidth="2" fill="none" />
       <path d="M26 32 Q32 28, 38 32" stroke="currentColor" strokeWidth="2" fill="none" />
       <path d="M24 38 Q32 34, 40 38" stroke="currentColor" strokeWidth="2" fill="none" />
-    </svg>
+    </motion.svg>
   );
 
   const IronIcon = () => (
-    <svg viewBox="0 0 64 64" className="care-icon">
+    <motion.svg
+      viewBox="0 0 64 64"
+      className="care-icon"
+      animate={ironAnimation}
+    >
       <path d="M15 25 L40 25 L45 30 L45 42 Q45 45, 42 45 L18 45 Q15 45, 15 42 Z" fill="currentColor" opacity="0.2" stroke="currentColor" strokeWidth="2" />
       <path d="M40 25 L55 20 Q58 19, 58 22 L58 28 Q58 30, 56 30 L45 30" fill="none" stroke="currentColor" strokeWidth="2" />
       <circle cx="25" cy="35" r="2" fill="currentColor" />
       <circle cx="35" cy="35" r="2" fill="currentColor" />
-    </svg>
+    </motion.svg>
   );
 
   const AirDryIcon = () => (
-    <svg viewBox="0 0 64 64" className="care-icon">
+    <motion.svg
+      viewBox="0 0 64 64"
+      className="care-icon"
+      style={{ originX: 0.5, originY: 0 }} /* Pivot from top */
+      animate={breezeAnimation}
+    >
       <path d="M20 15 L25 10 L30 15" stroke="currentColor" strokeWidth="2" fill="none" />
       <line x1="27" y1="12" x2="27" y2="45" stroke="currentColor" strokeWidth="2" />
       <rect x="15" y="45" width="24" height="15" rx="2" fill="currentColor" opacity="0.2" stroke="currentColor" strokeWidth="2" />
       <path d="M45 20 Q48 18, 51 20 M45 28 Q49 26, 53 28 M45 36 Q48 34, 51 36" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.6" />
-    </svg>
+    </motion.svg>
   );
 
   const PaintIcon = () => (
-    <svg viewBox="0 0 64 64" className="care-icon">
+    <motion.svg
+      viewBox="0 0 64 64"
+      className="care-icon"
+      animate={paintAnimation}
+    >
       <path d="M25 15 L30 10 Q32 8, 34 10 L39 15 L35 50 Q35 54, 32 54 Q29 54, 29 50 Z" fill="currentColor" opacity="0.2" stroke="currentColor" strokeWidth="2" />
       <ellipse cx="32" cy="13" rx="5" ry="3" fill="currentColor" />
       <path d="M20 45 Q22 42, 24 45 M28 48 Q30 45, 32 48 M36 48 Q38 45, 40 48" stroke="currentColor" strokeWidth="1.5" opacity="0.6" fill="none" />
-    </svg>
+    </motion.svg>
   );
 
   const SunIcon = () => (
-    <svg viewBox="0 0 64 64" className="care-icon">
+    <motion.svg
+      viewBox="0 0 64 64"
+      className="care-icon"
+      animate={sunAnimation}
+    >
       <circle cx="32" cy="32" r="12" fill="currentColor" opacity="0.2" stroke="currentColor" strokeWidth="2" />
       <line x1="32" y1="10" x2="32" y2="16" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
       <line x1="32" y1="48" x2="32" y2="54" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
@@ -50,49 +123,70 @@ const CareInstructions = () => {
       <line x1="43" y1="43" x2="47" y2="47" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
       <line x1="47" y1="17" x2="43" y2="21" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
       <line x1="21" y1="43" x2="17" y2="47" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-    </svg>
+    </motion.svg>
   );
 
   const CleanIcon = () => (
-    <svg viewBox="0 0 64 64" className="care-icon">
+    <motion.svg
+      viewBox="0 0 64 64"
+      className="care-icon"
+      animate={sprayAnimation}
+    >
       <path d="M25 20 L39 20 L42 50 Q42 54, 38 54 L26 54 Q22 54, 22 50 Z" fill="currentColor" opacity="0.2" stroke="currentColor" strokeWidth="2" />
       <path d="M20 20 L44 20 L44 15 Q44 12, 41 12 L23 12 Q20 12, 20 15 Z" fill="currentColor" stroke="currentColor" strokeWidth="2" />
       <circle cx="28" cy="35" r="1.5" fill="currentColor" />
       <circle cx="36" cy="30" r="1.5" fill="currentColor" />
       <circle cx="32" cy="42" r="1.5" fill="currentColor" />
-    </svg>
+    </motion.svg>
   );
 
   const HandIcon = () => (
-    <svg viewBox="0 0 64 64" className="care-icon">
+    <motion.svg
+      viewBox="0 0 64 64"
+      className="care-icon"
+      animate={wipeAnimation}
+    >
       <path d="M30 45 L30 20 Q30 17, 32 17 Q34 17, 34 20 L34 25" fill="none" stroke="currentColor" strokeWidth="2" />
       <path d="M34 25 L34 15 Q34 12, 36 12 Q38 12, 38 15 L38 25" fill="none" stroke="currentColor" strokeWidth="2" />
       <path d="M38 25 L38 17 Q38 14, 40 14 Q42 14, 42 17 L42 28" fill="none" stroke="currentColor" strokeWidth="2" />
       <path d="M42 28 L42 22 Q42 19, 44 19 Q46 19, 46 22 L46 35 Q46 45, 40 50 L30 50 Q22 50, 20 42 L18 35 Q17 32, 19 30 Q21 28, 24 29 L30 31" fill="currentColor" opacity="0.2" stroke="currentColor" strokeWidth="2" />
-    </svg>
+    </motion.svg>
   );
 
   const ShieldIcon = () => (
-    <svg viewBox="0 0 64 64" className="care-icon">
+    <motion.svg
+      viewBox="0 0 64 64"
+      className="care-icon"
+      animate={pulseAnimation}
+    >
       <path d="M32 10 L50 18 L50 32 Q50 45, 32 54 Q14 45, 14 32 L14 18 Z" fill="currentColor" opacity="0.2" stroke="currentColor" strokeWidth="2" />
       <path d="M26 32 L30 36 L38 26" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
+    </motion.svg>
   );
 
   const DropIcon = () => (
-    <svg viewBox="0 0 64 64" className="care-icon">
+    <motion.svg
+      viewBox="0 0 64 64"
+      className="care-icon"
+      animate={dripAnimation}
+    >
       <path d="M32 10 Q42 25, 42 35 Q42 45, 32 45 Q22 45, 22 35 Q22 25, 32 10 Z" fill="currentColor" opacity="0.2" stroke="currentColor" strokeWidth="2" />
       <path d="M28 30 Q30 28, 32 30" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" />
-    </svg>
+    </motion.svg>
   );
 
   const FrameIcon = () => (
-    <svg viewBox="0 0 64 64" className="care-icon">
+    <motion.svg
+      viewBox="0 0 64 64"
+      className="care-icon"
+      style={{ originX: 0.5, originY: 0 }} /* Pivot from top */
+      animate={breezeAnimation}
+    >
       <rect x="12" y="12" width="40" height="40" fill="none" stroke="currentColor" strokeWidth="3" />
       <rect x="18" y="18" width="28" height="28" fill="currentColor" opacity="0.2" stroke="currentColor" strokeWidth="2" />
       <path d="M25 30 L30 25 L35 30 L39 26" stroke="currentColor" strokeWidth="2" fill="none" />
       <circle cx="27" cy="24" r="2" fill="currentColor" />
-    </svg>
+    </motion.svg>
   );
 
   return (

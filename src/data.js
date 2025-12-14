@@ -1,6 +1,33 @@
-import siyaramCover from './assets/siyaram-mobile-cover.jpg';
-import roseAzureBag from './assets/rose-azure-bag.jpg';
+import fashion1back from './assets/fashion/1_back.webp';
+import fashion2 from './assets/fashion/2.png';
+import fashion3 from './assets/fashion/3.png';
+import fashion4 from './assets/fashion/4.png';
+import fashion5 from './assets/fashion/5.png';
+import fashion6 from './assets/fashion/6.png';
+import fashion7 from './assets/fashion/7.png';
+import fashion8 from './assets/fashion/8.JPG';
+import fashion9 from './assets/fashion/9.png';
+import fashion10 from './assets/fashion/10.jpg';
+import fashion11 from './assets/fashion/11.jpg';
+import fashion12 from './assets/fashion/12.jpg';
+import fashion13 from './assets/fashion/13.jpg';
+import fashion14 from './assets/fashion/14.jpg';
+import fashion15 from './assets/fashion/15.png';
+import fashion16 from './assets/fashion/16.jpeg';
+import fashion17 from './assets/fashion/17.jpg';
+import fashion18 from './assets/fashion/18.jpg';
+import fashion19 from './assets/fashion/19.png';
+import fashion20 from './assets/fashion/20.jpg';
+import fashion21 from './assets/fashion/21.jpg';
+import fashion22 from './assets/fashion/22.jpg';
+import fashion23 from './assets/fashion/23.jpg';
+import fashion24 from './assets/fashion/24.jpg';
+import fashion25 from './assets/fashion/25.jpeg';
+import fashion26 from './assets/fashion/26.jpeg';
+import fashion27 from './assets/fashion/27.jpg';
+import fashion28 from './assets/fashion/28.png';
 
+// Keep canvas imports
 import canvas1 from './assets/canvas/1.jpg';
 import canvas2 from './assets/canvas/2.jpg';
 import canvas3 from './assets/canvas/3.jpg';
@@ -11,92 +38,264 @@ import canvas8 from './assets/canvas/8.png';
 import canvas9 from './assets/canvas/9.jpeg';
 
 export const wearableCategories = [
-  { id: 'jackets', name: 'Jackets & Shirts', image: 'https://images.unsplash.com/photo-1551488852-d8048f578b66?auto=format&fit=crop&q=80&w=800' },
-  { id: 'bags', name: 'Bags', image: 'https://images.unsplash.com/photo-1584917865442-de89df76fe4f?auto=format&fit=crop&q=80&w=800' },
+  { id: 'jackets', name: 'Jackets & Shirts', image: fashion2 },
+  { id: 'bags', name: 'Bags', image: fashion7 },
   { id: 'shoes', name: 'Shoes', image: 'https://images.unsplash.com/photo-1560769625-ed5961594540?auto=format&fit=crop&q=80&w=800' },
-  { id: 'accessories', name: 'Accessories', image: 'https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&q=80&w=800' }
+  { id: 'accessories', name: 'Accessories', image: fashion9 }
 ];
 
 export const wearableProducts = [
   {
-    id: 7,
-    name: 'Siyaram',
-    category: 'accessories',
-    price: '70 AED',
-    image: siyaramCover,
-    description: 'Hand-painted mobile cover for OnePlus Nord featuring beautiful traditional art inspired design.',
-    material: 'Hard polycarbonate case with protective coating',
-    care: 'Wipe gently with a soft, dry cloth. Avoid harsh chemicals and excessive moisture. The artwork is sealed with a protective finish but should be handled with care to prevent scratches.'
-  },
-  {
-    id: 8,
-    name: 'Rose & Azure',
-    category: 'bags',
-    price: 'Custom',
-    image: roseAzureBag,
-    description: 'Elegant hand-painted leather bag featuring delicate pink roses and an azure blue bird. The floral motifs are beautifully placed on both the flap and front panel, creating a harmonious nature-inspired design.',
-    material: 'Premium faux leather with smooth finish and structured shape. Features sturdy handles and secure clasp closure.',
-    care: 'Wipe gently with a soft, slightly damp cloth for cleaning. Avoid harsh leather cleaners on painted areas. Keep away from prolonged water exposure and extreme heat. The hand-painted artwork is sealed with a protective finish but should be treated delicately. Store in a dust bag when not in use to protect the painting.'
-  },
-  {
     id: 1,
-    name: 'The Midnight Bloom Jacket',
+    name: 'Angel in Purgatory',
     category: 'jackets',
     price: 'Custom',
-    image: 'https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&q=80&w=800',
-    description: 'Hand-painted denim jacket featuring midnight blue florals.',
-    material: '100% Cotton Denim - Medium weight, pre-washed for comfort',
-    care: 'Turn inside out and hand wash in cold water with mild detergent. Air dry flat. Iron on reverse side only, avoiding painted areas. Do not bleach or tumble dry.'
+    image: fashion1back,
+    description: 'Reimagines classical art (like Venus) with a surrounding cast of cherubs and the bold silver text "ANGEL IN PURGATORY," giving the classical imagery a rebellious, streetwear twist.',
+    keywords: 'Classical Art, Renaissance Remix, Streetwear, Denim, Angel, Custom Art, Unique'
   },
   {
     id: 2,
-    name: 'Abstract Flora Shirt',
+    name: 'The Golden Deity Jacket',
     category: 'jackets',
     price: 'Custom',
-    image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80&w=800',
-    description: 'White linen shirt with abstract floral motifs.',
-    material: '100% Premium Linen - Lightweight and breathable',
-    care: 'Hand wash in cold water or dry clean recommended. Linen naturally wrinkles; iron on medium heat on reverse side. Avoid direct ironing on painted design. Store on hanger to maintain shape.'
+    image: fashion2,
+    description: 'A stunning statement piece featuring a highly detailed, monochrome portrait of a crowned figure, adorned with an elaborate gold halo and empowering gold calligraphy. The contrast between matte black denim and shimmering gold creates a regal, luxurious aesthetic.',
+    keywords: 'Denim, Hand-Painted, Gold, Streetwear, Statement, Custom Art, Beyoncé Style, Calligraphy'
   },
   {
     id: 3,
-    name: 'Golden Hour Tote',
-    category: 'bags',
+    name: 'The Off-Road Gypsy',
+    category: 'jackets',
     price: 'Custom',
-    image: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&q=80&w=800',
-    description: 'Canvas tote bag with golden hour inspired painting.',
-    material: '100% Heavy-duty cotton canvas with reinforced straps',
-    care: 'Spot clean with damp cloth and mild soap. For deeper cleaning, hand wash gently and air dry completely. Do not machine wash. The painted surface is water-resistant but avoid prolonged exposure to moisture.'
+    image: fashion3,
+    description: 'A minimalist yet detailed tribute to off-road culture, featuring a realistic painting of a modified black 4x4 (resembling a Maruti Gypsy/Suzuki Jimny) on a white tee.',
+    keywords: 'T-Shirt, Hand-Painted, Automotive, Off-Road, 4x4, Car Art, Adventure'
   },
   {
     id: 4,
-    name: 'Painted Canvas Sneakers',
-    category: 'shoes',
+    name: 'Vibrant Street Sass',
+    category: 'jackets',
     price: 'Custom',
-    image: 'https://images.unsplash.com/photo-1560769625-ed5961594540?auto=format&fit=crop&q=80&w=800',
-    description: 'High-top sneakers with unique color splashes.',
-    material: 'Canvas upper with rubber sole. Sealed with waterproof protective coating',
-    care: 'Spot clean with a damp cloth. Avoid submerging in water. Use a soft brush for dirt removal. Allow to air dry naturally. The painted design is sealed but treat gently to preserve artwork.'
+    image: fashion4,
+    description: 'This jacket bursts with energy, featuring a vivid, pop-art style portrait of a confident woman. The design uses bright neon greens, pinks, and blues for a playful, urban look.',
+    keywords: 'Pop Art, Neon, Street Style, Denim, Custom Art, Urban, Bold Colors'
   },
   {
     id: 5,
-    name: 'Silk Scarf - Azure',
-    category: 'accessories',
+    name: '"Think of Me" Statement Shirt',
+    category: 'jackets',
     price: 'Custom',
-    image: 'https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&q=80&w=800',
-    description: '100% silk scarf hand-dyed and painted.',
-    material: '100% Pure Mulberry Silk - Luxuriously soft with natural sheen',
-    care: 'Dry clean only or hand wash in cold water with silk-specific detergent. Do not wring or twist. Roll in towel to remove excess water, then lay flat to dry. Use cool iron on reverse side while slightly damp. Store flat or rolled, never hang.'
+    image: fashion5,
+    description: 'A piece of wearable modern art with a charcoal-style painting of an intimate couple on the pocket, juxtaposed with bold stenciled text: "DO YOU STILL THINK OF ME".',
+    keywords: 'Conceptual Art, Button-Down, Text Art, Hand-Painted, Modern, Narrative, Romance'
   },
   {
     id: 6,
-    name: 'Vintage Denim Revival',
+    name: 'Innocent Wonder',
     category: 'jackets',
     price: 'Custom',
-    image: 'https://images.unsplash.com/photo-1529391409740-59f2dea98771?auto=format&fit=crop&q=80&w=800',
-    description: 'Upcycled vintage denim with modern art back piece.',
-    material: 'Upcycled vintage denim (100% cotton) - Each piece varies slightly due to vintage sourcing',
-    care: 'Hand wash cold separately to preserve vintage fabric and artwork. Air dry only. Iron on reverse side with low heat. The painted back panel should be treated with extra care as it is on vintage material.'
+    image: fashion6,
+    description: 'A white button-down featuring a hyper-realistic portrait of a young child with a surprised expression, providing a sweet, emotive focus on childhood curiosity.',
+    keywords: 'Realistic Portrait, Childhood, Button-Down, Hand-Painted, Emotive, Yellow'
+  },
+  {
+    id: 7,
+    name: 'Starry Muse Tote',
+    category: 'bags',
+    price: 'Custom',
+    image: fashion7,
+    description: 'A functional accessory with a profile of a mythical figure whose hair flows into a starry, Van Gogh-style night sky, using vibrant blues and yellows.',
+    keywords: 'Tote Bag, Impressionist, Van Gogh Style, Starry Night, Art Lover, Functional Art'
+  },
+  {
+    id: 8,
+    name: 'The Golden Lift',
+    category: 'jackets',
+    price: 'Custom',
+    image: fashion8,
+    description: 'A dynamic celebration of movement featuring a painted duo performing a dance lift, accented by delicate line art and a surreal "melting" effect in yellow paint.',
+    keywords: 'Dance Art, Movement, Denim, Custom Art, Fluidity, Surreal, Mixed Media'
+  },
+  {
+    id: 9,
+    name: 'Celestial Trishul',
+    category: 'accessories',
+    price: 'Custom',
+    image: fashion9,
+    description: 'A unique accessory featuring a trident (Trishul) glowing with ethereal blue light, set against a vibrant cosmic background of purples and stars. Blends mythology with galaxy art.',
+    keywords: 'Phone Case, Spiritual, Trishul, Galaxy Art, Custom Painted, Mystical, Starry'
+  },
+  {
+    id: 10,
+    name: 'The Iron Eagle',
+    category: 'jackets',
+    price: 'Custom',
+    image: fashion10,
+    description: 'A classic homage to biker culture and freedom. Features a massive spread-winged eagle clutching a stylized V-twin motorcycle engine in silver and yellow tones.',
+    keywords: 'Biker, Denim, Eagle, V-Twin, Motorcycle, Custom Art, Freedom'
+  },
+  {
+    id: 11,
+    name: 'Silver Baroque Scroll',
+    category: 'jackets',
+    price: 'Custom',
+    image: fashion11,
+    description: 'An elegant black jacket covered in an intricate, all-over silver scroll and floral pattern. The metallic paint pops against the dark fabric, giving it a luxurious, baroque, or rococo-inspired aesthetic suitable for evening wear.',
+    keywords: 'Baroque, Silver, Metallic, Floral Scroll, Elegant, Black Denim, Patterned'
+  },
+  {
+    id: 12,
+    name: 'The Subversive Lux',
+    category: 'jackets',
+    price: 'Custom',
+    image: fashion12,
+    description: 'A grunge-style black jacket featuring a moody portrait obscured by a Louis Vuitton pattern mask. The sleeves feature bold, graffiti-style text reading "THIS IS NOT" and "Louis Vuitton," creating a rebellious, anti-fashion statement piece.',
+    keywords: 'Grunge, Street Art, Graffiti, Statement Piece, Black Jacket, Urban, Edgy'
+  },
+  {
+    id: 13,
+    name: 'Heart of Gold',
+    category: 'jackets',
+    price: 'Custom',
+    image: fashion13,
+    description: 'A black denim jacket featuring a striking illustration of an anatomical heart bound in chains. The gritty yellow and black art is complemented by the bold, stenciled text "HEART OF GOLD," creating a metaphor for guarded emotions.',
+    keywords: 'Anatomical Heart, Grunge, Graphic, Denim Jacket, Streetwear, Text Art'
+  },
+  {
+    id: 14,
+    name: 'The Kintsugi Lion',
+    category: 'jackets',
+    price: 'Custom',
+    image: fashion14,
+    description: 'A majestic black denim jacket featuring a hyper-realistic lion portrait. The lion is detailed with "cracks" filled in gold paint, inspired by the Japanese art of Kintsugi (repairing with gold), symbolizing strength in healing. Finished with gold "FIL D\'ART" lettering.',
+    keywords: 'Lion, Kintsugi, Gold, Black Denim, Wildlife Art, Streetwear, Custom Jacket'
+  },
+  {
+    id: 15,
+    name: 'Desi Pop Fusion',
+    category: 'jackets',
+    price: 'Custom',
+    image: fashion15,
+    description: 'A vibrant blue denim jacket blending traditional and modern vibes. Features a woman in traditional Indian jewelry and sunglasses holding a cocktail, surrounded by colorful stylized flowers and foliage. A fun, sassy celebration of cultural fusion.',
+    keywords: 'Fusion Art, Desi Pop, Denim Jacket, Colorful, Portrait, Floral, Cocktail'
+  },
+  {
+    id: 16,
+    name: 'The Solitary Path',
+    category: 'jackets',
+    price: 'Custom',
+    image: fashion16,
+    description: 'A white linen button-down shirt featuring a serene, monochrome painting of a tree-lined path. The artwork spans the right side of the shirt, resembling a charcoal or ink sketch, perfect for a sophisticated, artistic look.',
+    keywords: 'Linen Shirt, Landscape, Trees, Monochrome, Sketch Style, Nature, Minimalist'
+  },
+  {
+    id: 17,
+    name: 'Tropical Pop Bangles',
+    category: 'accessories',
+    price: 'Custom',
+    image: fashion17,
+    description: 'A lively set of wooden bangles featuring hand-painted designs. One showcases a juicy watermelon motif on green, while the other features delicate floral sketches on pink/coral, perfect for a summer statement.',
+    keywords: 'Bangles, Jewelry, Tropical, Watermelon, Floral, Summer, Hand-Painted'
+  },
+  {
+    id: 18,
+    name: 'Sunflower L\'Amour',
+    category: 'accessories',
+    price: 'Custom',
+    image: fashion18,
+    description: 'A charming olive green wallet customized with a bright, sunny yellow sunflower. Next to the bloom, the word "l\'amour" (love) is written in white script, making it a sweet and romantic accessory.',
+    keywords: 'Wallet, Sunflower, Floral, French, L\'Amour, Cute, Custom Leather'
+  },
+  {
+    id: 19,
+    name: 'Gilded Peony & Butterfly',
+    category: 'bags',
+    price: 'Custom',
+    image: fashion19,
+    description: 'A sophisticated customization on a black tote bag. Features a rectangular art panel with delicately painted white peonies, golden fruit, and butterflies. The design uses gold outlines to create a stained-glass or embroidery effect.',
+    keywords: 'Tote Bag, Floral, Peony, Butterfly, Gold, Elegant, Custom Accessories'
+  },
+  {
+    id: 20,
+    name: 'Sacred Nandi & Lotus',
+    category: 'accessories',
+    price: 'Custom',
+    image: fashion20,
+    description: 'A culturally rich phone case design featuring a white Nandi (sacred bull) adorned in gold jewelry, set against a background of vibrant pink lotus flowers and blue sky. A beautiful blend of traditional devotion and modern utility.',
+    keywords: 'Phone Case, Nandi, Lotus, Indian Art, Spiritual, Traditional, Hand-Painted'
+  },
+  {
+    id: 21,
+    name: 'Wild Duo Tablet Case',
+    category: 'accessories',
+    price: 'Custom',
+    image: fashion21,
+    description: 'A striking folio case for tablets featuring a Black Panther and a Leopard nestled among lush tropical foliage. The contrast between the dark predator and the spotted cat against the green leaves creates a vibrant, wild aesthetic.',
+    keywords: 'iPad Case, Tablet Cover, Panther, Leopard, Jungle, Wildlife Art, Tech Accessories'
+  },
+  {
+    id: 22,
+    name: 'The Dapper Pup',
+    category: 'jackets',
+    price: 'Custom',
+    image: fashion22,
+    description: 'A heartwarming custom denim jacket featuring a realistic portrait of a Shih Tzu wearing its own denim shirt. The attention to detail in the fur texture and the "denim-on-denim" concept makes this a cute, meta-fashion statement.',
+    keywords: 'Dog Portrait, Shih Tzu, Pet Art, Cute, Denim Jacket, Custom Art, Realistic'
+  },
+  {
+    id: 23,
+    name: 'Majestic Lion Shirt',
+    category: 'jackets',
+    price: 'Custom',
+    image: fashion23,
+    description: 'A bold black button-down shirt featuring a massive, hyper-realistic portrait of a lion\'s face spanning one side. The golden mane and piercing blue eyes create an intense and regal focal point.',
+    keywords: 'Men\'s Shirt, Lion, Wildlife, Realistic, Statement Wear, Black Shirt, King of Jungle'
+  },
+  {
+    id: 24,
+    name: 'Nature\'s Stag Tote',
+    category: 'bags',
+    price: 'Custom',
+    image: fashion24,
+    description: 'A bright yellow tote bag featuring a stylized deer head where the antlers transform into blooming branches. The blend of animal and botanical elements creates a whimsical, nature-loving design.',
+    keywords: 'Tote Bag, Deer, Stag, Floral, Nature, Yellow, Whimsical, Accessories'
+  },
+  {
+    id: 25,
+    name: 'The Storyteller Jacket',
+    category: 'jackets',
+    price: 'Custom',
+    image: fashion25,
+    description: 'A custom black jacket paying homage to "How I Met Your Mother." It features iconic symbols like the yellow umbrella, blue French horn, and quotes like "Suit Up," creating a nostalgic collage for fans of the series.',
+    keywords: 'TV Show, HIMYM, Pop Culture, Collage, Fan Art, Custom Jacket, Tribute'
+  },
+  {
+    id: 26,
+    name: 'Soul of Music Jacket',
+    category: 'jackets',
+    price: 'Custom',
+    image: fashion26,
+    description: 'A black denim jacket dedicated to music lovers. Features a painting of a guitarist with a colorful abstract background and the text "MUSIC SETS US FREE" and "DJ" with a crown, embodying the passion of live performance.',
+    keywords: 'Music, Guitar, DJ, Colorful, Statement Jacket, Custom Denim, Streetwear'
+  },
+  {
+    id: 27,
+    name: 'Hummingbird Grace',
+    category: 'jackets',
+    price: 'Custom',
+    image: fashion27,
+    description: 'A sleek black shirt featuring a delicate painting of a hummingbird hovering near a branch. The iridescent colors of the bird contrast beautifully with the dark fabric, offering a subtle yet artistic touch.',
+    keywords: 'Hummingbird, Bird Art, Nature, Black Shirt, Elegant, Minimalist Art'
+  },
+  {
+    id: 28,
+    name: 'Forever Us Keychain',
+    category: 'accessories',
+    price: 'Custom',
+    image: fashion28,
+    description: 'A personalized hand-painted wooden keychain featuring a charming portrait of a couple. A perfect keepsake that turns a cherished memory into a portable piece of art.',
+    keywords: 'Keychain, Couple Portrait, Gift, Personalized, Small Leather Goods, Romantic'
   }
 ];
 

@@ -6,7 +6,7 @@ import julieReview from '../assets/julie-review.jpg';
 
 const Home = () => {
   const featuredWearable = wearableProducts.slice(0, 3);
-  const featuredCanvas = canvasArtworks.slice(0, 2);
+  const featuredCanvas = canvasArtworks.slice(0, 3);
 
   return (
     <div className="home-page">
@@ -90,16 +90,32 @@ const Home = () => {
       <section className="section featured-canvas">
         <div className="container">
           <h2 className="section-title text-center">Canvas Art</h2>
-          <div className="grid-2">
-            {featuredCanvas.map((item) => (
-              <Link to="/canvas-art" key={item.id} className="art-card">
-                <div className="image-container landscape">
-                  <img src={item.image} alt={item.title} loading="lazy" />
-                </div>
-                <h3>{item.title}</h3>
+          <div className="mosaic-gallery">
+            {/* Main Feature (Left) */}
+            <Link to="/canvas-art" className="art-card main-feature">
+              <div className="image-container main">
+                <img src={featuredCanvas[0].image} alt={featuredCanvas[0].title} loading="lazy" />
+              </div>
+              <div className="art-info">
+                <h3>{featuredCanvas[0].title}</h3>
                 <p>Mixed Media on Canvas</p>
-              </Link>
-            ))}
+              </div>
+            </Link>
+
+            {/* Side Stack (Right) */}
+            <div className="side-stack">
+              {featuredCanvas.slice(1).map((item) => (
+                <Link to="/canvas-art" key={item.id} className="art-card side-feature">
+                  <div className="image-container side">
+                    <img src={item.image} alt={item.title} loading="lazy" />
+                  </div>
+                  <div className="art-info">
+                    <h3>{item.title}</h3>
+                    <p>Mixed Media on Canvas</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
           <div className="text-center mt-lg">
             <Link to="/canvas-art" className="btn">Explore Canvas Art &rarr;</Link>
@@ -372,7 +388,7 @@ const Home = () => {
         }
         
         .image-container.landscape {
-          height: 300px;
+          height: 500px;
         }
 
         .product-card:hover img, .art-card:hover img {
@@ -623,6 +639,46 @@ const Home = () => {
 
           .reviewer-name-large {
             font-size: 1.5rem;
+          }
+        }
+
+        /* Mosaic Gallery Layout */
+        .mosaic-gallery {
+          display: grid;
+          grid-template-columns: 1.2fr 0.8fr;
+          gap: 2rem;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .side-stack {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+        }
+
+        .image-container.main {
+          height: 600px;
+          margin-bottom: 1rem;
+        }
+
+        .image-container.side {
+          height: 270px; /* (600 - 2rem gap) / 2 roughly, minus text space consideration */
+          margin-bottom: 0.8rem;
+        }
+        
+        /* Adjust for mobile */
+        @media (max-width: 768px) {
+          .mosaic-gallery {
+            grid-template-columns: 1fr;
+          }
+          
+          .image-container.main {
+            height: 400px;
+          }
+          
+          .image-container.side {
+            height: 300px;
           }
         }
 

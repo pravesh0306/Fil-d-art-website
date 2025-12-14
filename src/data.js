@@ -1,6 +1,14 @@
 import siyaramCover from './assets/siyaram-mobile-cover.jpg';
 import roseAzureBag from './assets/rose-azure-bag.jpg';
 
+import canvas1 from './assets/canvas/1.jpg';
+import canvas2 from './assets/canvas/2.jpg';
+import canvas3 from './assets/canvas/3.jpg';
+import canvas4 from './assets/canvas/4.jpg';
+import canvas7 from './assets/canvas/7.JPG';
+import canvas8 from './assets/canvas/8.png';
+import canvas9 from './assets/canvas/9.jpeg';
+
 export const wearableCategories = [
   { id: 'jackets', name: 'Jackets & Shirts', image: 'https://images.unsplash.com/photo-1551488852-d8048f578b66?auto=format&fit=crop&q=80&w=800' },
   { id: 'bags', name: 'Bags', image: 'https://images.unsplash.com/photo-1584917865442-de89df76fe4f?auto=format&fit=crop&q=80&w=800' },
@@ -98,7 +106,7 @@ export const canvasArtworks = [
     year: '2024',
     dimensions: '48" x 60"',
     medium: 'Acrylic and texture on canvas',
-    image: 'https://images.unsplash.com/photo-1579783902614-a3fb39279c71?auto=format&fit=crop&q=80&w=800',
+    image: canvas1,
     available: true
   },
   {
@@ -107,7 +115,7 @@ export const canvasArtworks = [
     year: '2023',
     dimensions: '36" x 36"',
     medium: 'Mixed media',
-    image: 'https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&q=80&w=800',
+    image: canvas2,
     available: false
   },
   {
@@ -116,7 +124,7 @@ export const canvasArtworks = [
     year: '2024',
     dimensions: '40" x 50"',
     medium: 'Oil on canvas',
-    image: 'https://images.unsplash.com/photo-1580136579312-94651dfd596d?auto=format&fit=crop&q=80&w=800',
+    image: canvas3,
     available: true
   },
   {
@@ -125,7 +133,34 @@ export const canvasArtworks = [
     year: '2023',
     dimensions: '24" x 24"',
     medium: 'Acrylic with gold leaf',
-    image: 'https://images.unsplash.com/photo-1578321272176-b7bbc0679853?auto=format&fit=crop&q=80&w=800',
+    image: canvas4,
+    available: true
+  },
+  {
+    id: 7,
+    title: 'Abstract Dimensions',
+    year: '2024',
+    dimensions: '30" x 40"',
+    medium: 'Acrylic on Canvas',
+    image: canvas7,
+    available: true
+  },
+  {
+    id: 8,
+    title: 'Liquid Dreams',
+    year: '2024',
+    dimensions: '24" x 36"',
+    medium: 'Mixed Media',
+    image: canvas8,
+    available: true
+  },
+  {
+    id: 9,
+    title: 'Modern Textures',
+    year: '2024',
+    dimensions: '16" x 20"',
+    medium: 'Texture Paste & Acrylic',
+    image: canvas9,
     available: true
   }
 ];

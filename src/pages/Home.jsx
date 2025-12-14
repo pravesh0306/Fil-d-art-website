@@ -85,6 +85,7 @@ const Home = () => {
                 </svg>
               </motion.div>
               <h3>Hand-painted</h3>
+              <p>One-of-a-kind wearable art.</p>
             </div>
 
             {/* Wash with care */}
@@ -104,6 +105,7 @@ const Home = () => {
                 </svg>
               </motion.div>
               <h3>Wash with care</h3>
+              <p>Gentle care preserves beauty.</p>
             </div>
 
             {/* Finest fabric */}
@@ -122,6 +124,7 @@ const Home = () => {
                 </svg>
               </motion.div>
               <h3>Finest fabric</h3>
+              <p>Premium comfort & quality.</p>
             </div>
 
             {/* Artisan crafted */}
@@ -140,6 +143,7 @@ const Home = () => {
                 </svg>
               </motion.div>
               <h3>Artisan crafted</h3>
+              <p>Handmade with precision.</p>
             </div>
           </div>
         </div>
@@ -423,6 +427,13 @@ const Home = () => {
           font-weight: 500;
           opacity: 0.8;
           margin: 0;
+        }
+
+        .feature-item p {
+          font-size: 0.85rem;
+          opacity: 0.6;
+          margin: 0;
+          line-height: 1.4;
         }
 
         @media (max-width: 768px) {

@@ -5,6 +5,7 @@ import canvas1 from './assets/canvas/1.jpg';
 import canvas2 from './assets/canvas/2.jpg';
 import canvas3 from './assets/canvas/3.jpg';
 import canvas4 from './assets/canvas/4.jpg';
+import canvas5 from './assets/canvas/5.png';
 import canvas7 from './assets/canvas/7.JPG';
 import canvas8 from './assets/canvas/8.png';
 import canvas9 from './assets/canvas/9.jpeg';
@@ -138,6 +139,16 @@ export const canvasArtworks = [
     medium: 'Acrylic with gold leaf',
     image: canvas4,
     description: 'A painting featuring a series of ornate, golden, perfume-bottle-shaped frames, each containing a scene (e.g., Burj Khalifa, desert, boat) against a red background, with a falcon on the left.',
+    available: true
+  },
+  {
+    id: 5,
+    title: 'New Collection Piece',
+    year: '2024',
+    dimensions: '30" x 30"',
+    medium: 'Mixed Media',
+    image: canvas5,
+    description: 'A striking new addition to the collection, featuring bold composition and expressive textures.',
     available: true
   },
   {

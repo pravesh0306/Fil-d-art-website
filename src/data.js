@@ -102,65 +102,72 @@ export const wearableProducts = [
 export const canvasArtworks = [
   {
     id: 1,
-    title: 'Ethereal Silence',
+    title: 'Hanuman\'s Drench',
     year: '2024',
     dimensions: '48" x 60"',
     medium: 'Acrylic and texture on canvas',
     image: canvas1,
+    description: 'A highly realistic close-up painting of Lord Hanuman\'s face, with water drops running over him, emphasizing the texture of the water and his fur/hair.',
     available: true
   },
   {
     id: 2,
-    title: 'Urban Rhythm',
+    title: 'Golden Garuda of the Gulf',
     year: '2023',
     dimensions: '36" x 36"',
     medium: 'Mixed media',
     image: canvas2,
+    description: 'An intricate, mixed-media artwork featuring a golden, bejeweled Garuda-like eagle over a red background, surrounded by iconic Middle Eastern and possibly South-East Asian architecture, with figures in traditional attire.',
     available: false
   },
   {
     id: 3,
-    title: 'Serenity in Blue',
+    title: 'Decorated Bull',
     year: '2024',
     dimensions: '40" x 50"',
     medium: 'Oil on canvas',
     image: canvas3,
+    description: 'A richly detailed painting of a white bull (perhaps an Indian Nandi/Pongal bull) decorated with colorful cloth, bells, and ornaments against a dark, vibrant background.',
     available: true
   },
   {
     id: 4,
-    title: 'Golden Fragments',
+    title: 'Seven Scents of Dubai',
     year: '2023',
     dimensions: '24" x 24"',
     medium: 'Acrylic with gold leaf',
     image: canvas4,
+    description: 'A painting featuring a series of ornate, golden, perfume-bottle-shaped frames, each containing a scene (e.g., Burj Khalifa, desert, boat) against a red background, with a falcon on the left.',
     available: true
   },
   {
     id: 7,
-    title: 'Abstract Dimensions',
+    title: 'Ganesha\'s Palette',
     year: '2024',
     dimensions: '30" x 40"',
     medium: 'Acrylic on Canvas',
     image: canvas7,
+    description: 'A painting of a closed-eye blue deity (likely Ganesha or Krishna) surrounded by red flowers, painted directly onto a wooden artist\'s palette.',
     available: true
   },
   {
     id: 8,
-    title: 'Liquid Dreams',
+    title: 'Black Velocity',
     year: '2024',
     dimensions: '24" x 36"',
     medium: 'Mixed Media',
     image: canvas8,
+    description: 'A dark, highly glossy artwork featuring a small, raised 3D black model of a Lamborghini against a dark, smoky background, with the name "Lamborghini" written on the side.',
     available: true
   },
   {
     id: 9,
-    title: 'Modern Textures',
+    title: 'Mushroom Crown',
     year: '2024',
     dimensions: '16" x 20"',
     medium: 'Texture Paste & Acrylic',
     image: canvas9,
+    description: 'A surreal, colorful painting of a person with eyes closed, crying, with a crown of vibrant mushrooms and flowers.',
     available: true
   }
 ];

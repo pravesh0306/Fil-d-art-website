@@ -5,74 +5,74 @@ import { ArrowLeft } from 'lucide-react';
 import { canvasArtworks } from '../data';
 
 const ArtworkDetail = () => {
-    const { id } = useParams();
-    const artwork = canvasArtworks.find(p => p.id === parseInt(id));
+  const { id } = useParams();
+  const artwork = canvasArtworks.find(p => p.id === parseInt(id));
 
-    if (!artwork) {
-        return (
-            <div className="container" style={{ paddingTop: '120px', textAlign: 'center' }}>
-                <h2>Artwork not found</h2>
-                <Link to="/canvas-art" className="btn-text">Back to Gallery</Link>
-            </div>
-        );
-    }
-
+  if (!artwork) {
     return (
-        <div className="page-container">
-            <div className="container">
-                <Link to="/canvas-art" className="back-link">
-                    <ArrowLeft size={16} /> Back to Gallery
-                </Link>
+      <div className="container" style={{ paddingTop: '120px', textAlign: 'center' }}>
+        <h2>Artwork not found</h2>
+        <Link to="/canvas-art" className="btn-text">Back to Gallery</Link>
+      </div>
+    );
+  }
 
-                <div className="artwork-detail-grid">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        className="artwork-view"
-                    >
-                        <div className="matte-frame">
-                            <img src={artwork.image} alt={artwork.title} className="artwork-full" />
-                        </div>
-                    </motion.div>
+  return (
+    <div className="page-container">
+      <div className="container">
+        <Link to="/canvas-art" className="back-link">
+          <ArrowLeft size={16} /> Back to Gallery
+        </Link>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                        className="artwork-info-panel"
-                    >
-                        <h1 className="artwork-title">{artwork.title}</h1>
-                        <p className="artwork-meta">{artwork.year}</p>
+        <div className="artwork-detail-grid">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="artwork-view"
+          >
+            <div className="matte-frame">
+              <img src={artwork.image} alt={artwork.title} className="artwork-full" />
+            </div>
+          </motion.div>
 
-                        <div className="specs-list">
-                            <div className="spec-item">
-                                <span className="label">Medium</span>
-                                <span className="value">{artwork.medium}</span>
-                            </div>
-                            <div className="spec-item">
-                                <span className="label">Dimensions</span>
-                                <span className="value">{artwork.dimensions}</span>
-                            </div>
-                            <div className="spec-item">
-                                <span className="label">Status</span>
-                                <span className="value">{artwork.available ? 'Available' : 'Sold'}</span>
-                            </div>
-                        </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="artwork-info-panel"
+          >
+            <h1 className="artwork-title">{artwork.title}</h1>
+            <p className="artwork-meta">{artwork.year}</p>
 
-                        <div className="inspiration-block">
-                            <h3>Inspiration</h3>
-                            <p>A textural exploration of form and emotion. This piece was created using multiple layers to achieve depth and narrative, reflecting the intersection of traditional technique and modern expression.</p>
-                        </div>
-
-                        <div className="cta-block">
-                            <button className="enquire-btn-outline">Enquire Potential Acquisition</button>
-                        </div>
-                    </motion.div>
-                </div>
+            <div className="specs-list">
+              <div className="spec-item">
+                <span className="label">Medium</span>
+                <span className="value">{artwork.medium}</span>
+              </div>
+              <div className="spec-item">
+                <span className="label">Dimensions</span>
+                <span className="value">{artwork.dimensions}</span>
+              </div>
+              <div className="spec-item">
+                <span className="label">Status</span>
+                <span className="value">{artwork.available ? 'Available' : 'Sold'}</span>
+              </div>
             </div>
 
-            <style jsx>{`
+            <div className="inspiration-block">
+              <h3>Description</h3>
+              <p>{artwork.description || "A textural exploration of form and emotion. This piece was created using multiple layers to achieve depth and narrative, reflecting the intersection of traditional technique and modern expression."}</p>
+            </div>
+
+            <div className="cta-block">
+              <button className="enquire-btn-outline">Enquire Potential Acquisition</button>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      <style jsx>{`
         .page-container {
           padding-top: 120px;
           min-height: 100vh;
@@ -209,8 +209,8 @@ const ArtworkDetail = () => {
           }
         }
       `}</style>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default ArtworkDetail;

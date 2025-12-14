@@ -129,3 +129,54 @@ export const canvasArtworks = [
     available: true
   }
 ];
+
+export const journalPosts = [
+  {
+    id: 'art-you-wear',
+    title: 'Art You Wear',
+    date: 'March 15, 2024',
+    image: 'https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&q=80&w=800',
+    excerpt: 'Exploring the philosophy behind wearable art and how it transforms everyday fashion into personal expression.',
+    content: `
+      <p>Art should not be confined to galleries and museums. It should be lived with, touched, and worn. "Art You Wear" is at the core of my philosophy, bridging the gap between the static canvas and the dynamic movement of the human body.</p>
+      
+      <h3>The Philosophy</h3>
+      <p>When you wear a piece of hand-painted art, you become a walking gallery. You carry the artist's brushstrokes, emotions, and energy with you. It creates a unique connection between the creator and the collector that traditional canvas art rarely achieves.</p>
+      
+      <h3>More Than Fashion</h3>
+      <p>This is not just about fashion; it's about expression. Each jacket, bag, or accessory is a conversation starter, a statement piece that defies mass production. It celebrates individuality and the human touch in an increasingly automated world.</p>
+    `
+  },
+  {
+    id: 'from-canvas-to-cloth',
+    title: 'From Canvas to Cloth',
+    date: 'April 02, 2024',
+    image: 'https://images.unsplash.com/photo-1584917865442-de89df76fe4f?auto=format&fit=crop&q=80&w=800',
+    excerpt: 'A behind-the-scenes look at the intricate process of adapting painting techniques for fabric and textiles.',
+    content: `
+      <p>Transitioning from traditional canvas to fabric requires a complete reimagining of technique. Fabric moves, stretches, and breathes. It demands a different relationship with the paint.</p>
+      
+      <h3>The Preparation</h3>
+      <p>Every piece starts with fabric preparation. Whether it's vintage denim or premium leather, the surface must be primed to accept the paint while remaining flexible. This initial step is crucial for longevity.</p>
+      
+      <h3>The Process</h3>
+      <p>I use specialized fabric mediums mixed with high-quality acrylics. Layering is key. Unlike canvas where I might build thick texture, wearable art requires thin, durable layers that won't crack. It's a delicate balance of artistic vision and technical durability.</p>
+    `
+  },
+  {
+    id: 'exhibition-notes-2024',
+    title: 'Exhibition Notes 2024',
+    date: 'May 10, 2024',
+    image: 'https://images.unsplash.com/photo-1579783902614-a3fb39279c71?auto=format&fit=crop&q=80&w=800',
+    excerpt: 'Reflections on the latest gallery showcase and the evolving direction of my mixed media work.',
+    content: `
+      <p>The 2024 exhibition season has been a whirlwind of color and connection. Showcasing my latest collection "Ethereal Silence" allowed me to explore themes of quietude amidst urban chaos.</p>
+      
+      <h3>Highlights</h3>
+      <p>Seeing the reactions of visitors as they interacted with the textured pieces was the highlight. The large-scale works were designed to be immersive, inviting viewers to get close and observe the details.</p>
+      
+      <h3>What's Next</h3>
+      <p>This exhibition has sparked new ideas for combining my wearable line with my fine art practice. Stay tuned for a collection that blurs these lines even further.</p>
+    `
+  }
+];

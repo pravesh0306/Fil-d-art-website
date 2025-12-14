@@ -17,6 +17,7 @@ import ShippingPolicy from './pages/ShippingPolicy';
 import RefundPolicy from './pages/RefundPolicy';
 import TermsConditions from './pages/TermsConditions';
 import ContactUs from './pages/ContactUs';
+import JournalPost from './pages/JournalPost';
 
 // Scroll to top on route change
 import { useEffect } from "react";
@@ -53,6 +54,7 @@ function App() {
             <Route path="/refund-policy" element={<RefundPolicy />} />
             <Route path="/terms-conditions" element={<TermsConditions />} />
             <Route path="/contact" element={<ContactUs />} />
+            <Route path="/journal/:slug" element={<JournalPost />} />
           </Routes>
         </main>
         <Footer />

@@ -16,8 +16,8 @@ const Collaborations = () => {
         <div className="container">
           <div className="services-grid">
             <div className="service-card">
-              <h3>Weddings & Celebrations</h3>
-              <p>Personalized artistic favors, live customization, and unique gifts for weddings, birthdays, and special events.</p>
+              <h3>Birthdays & Celebrations</h3>
+              <p>Personalized artistic favors, live customization, and unique gifts for birthdays, weddings, and special events.</p>
             </div>
             <div className="service-card">
               <h3>Boutique Capsules</h3>

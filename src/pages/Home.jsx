@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { wearableProducts, canvasArtworks, journalPosts } from '../data';
+import heroVideo from '../assets/backgroung image/download.mp4';
 import julieReview from '../assets/julie-review.jpg';
 
 const Home = () => {
@@ -12,6 +13,19 @@ const Home = () => {
     <div className="home-page">
       {/* Hero Section */}
       <section className="hero">
+        <div className="hero-background">
+          <video
+            autoPlay
+            loop
+            muted
+            className="hero-video"
+            playsInline
+          >
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+          <div className="hero-overlay"></div>
+        </div>
+
         <div className="hero-content text-center">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -50,9 +64,6 @@ const Home = () => {
             <Link to="/custom-orders" className="btn-text">Get Yours Customised &rarr;</Link>
           </motion.div>
         </div>
-
-        {/* Placeholder for Hero Image */}
-        <div className="hero-image-placeholder"></div>
       </section>
 
       {/* About Snippet */}
@@ -327,18 +338,32 @@ const Home = () => {
           margin-top: 1rem;
         }
 
-        .hero-image-placeholder {
+        .hero-background {
           position: absolute;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
-          background: linear-gradient(to bottom, transparent 50%, var(--color-bg)), 
-                      url('https://images.unsplash.com/photo-1544441893-675973e31985?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-          background-size: cover;
-          background-position: center;
           z-index: 1;
-          opacity: 0.15;
+          overflow: hidden;
+        }
+
+        .hero-video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0.55;
+          transform: scale(1.3);
+        }
+
+        .hero-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to bottom, transparent 50%, var(--color-bg));
+          z-index: 2;
         }
 
         .about-text {

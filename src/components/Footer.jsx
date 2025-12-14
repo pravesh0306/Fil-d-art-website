@@ -92,8 +92,6 @@ const Footer = () => {
         }
 
         .footer-social {
-
-        .footer-social {
           display: flex;
           gap: 1.5rem;
           margin: 1rem 0;
@@ -168,14 +166,6 @@ const Footer = () => {
         }
 
         @media (max-width: 768px) {
-          .footer-links {
-            gap: 1.2rem;
-          }
-
-          .footer-links a {
-            font-size: 0.85rem;
-          }
-
           .menu-toggle {
             width: 44px;
             height: 44px;
@@ -193,12 +183,7 @@ const Footer = () => {
           }
 
           .footer-logo {
-            font-size: 1.3rem;
-          }
-
-          .footer-links {
-            flex-direction: column;
-            gap: 1rem;
+            font-size: 2.5rem;
           }
 
           .dropdown-menu {

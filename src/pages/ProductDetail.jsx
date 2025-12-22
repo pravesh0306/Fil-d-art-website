@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
@@ -7,6 +7,15 @@ import { wearableProducts } from '../data';
 const ProductDetail = () => {
   const { id } = useParams();
   const product = wearableProducts.find(p => p.id === parseInt(id));
+  const [isZoomed, setIsZoomed] = useState(false);
+  const [activeImage, setActiveImage] = useState(product ? product.image : null);
+
+  // Effect to update activeImage if product changes or on initial load
+  React.useEffect(() => {
+    if (product) {
+      setActiveImage(product.image);
+    }
+  }, [product]);
 
   if (!product) {
     return (
@@ -31,15 +40,32 @@ const ProductDetail = () => {
             transition={{ duration: 0.6 }}
             className="detail-gallery"
           >
-            <div className="main-image-container">
-              <img src={product.image} alt={product.name} className="main-image" />
+            <div className={`main-image-container ${isZoomed ? 'zoomed-container' : ''}`}>
+              <img
+                src={activeImage}
+                alt={product.name}
+                className="main-image"
+                onClick={() => setIsZoomed(!isZoomed)}
+                style={{
+                  transform: isZoomed ? 'scale(2)' : 'scale(1)',
+                  cursor: isZoomed ? 'zoom-out' : 'zoom-in'
+                }}
+              />
             </div>
-            {/* Placeholder for additional detail shots */}
-            <div className="thumbnail-grid">
-              <div className="thumbnail active"><img src={product.image} alt="" /></div>
-              <div className="thumbnail"></div>
-              <div className="thumbnail"></div>
-            </div>
+            {/* Gallery Thumbnails */}
+            {product.images && product.images.length > 1 && (
+              <div className="thumbnail-grid">
+                {product.images.map((img, index) => (
+                  <div
+                    key={index}
+                    className={`thumbnail ${activeImage === img ? 'active' : ''}`}
+                    onClick={() => setActiveImage(img)}
+                  >
+                    <img src={img} alt={`${product.name} view ${index + 1}`} />
+                  </div>
+                ))}
+              </div>
+            )}
           </motion.div>
 
           <motion.div
@@ -107,12 +133,21 @@ const ProductDetail = () => {
           background-color: #f0f0f0;
           margin-bottom: 1rem;
           overflow: hidden;
+          transition: aspect-ratio 0.3s ease;
+        }
+
+        .main-image-container.zoomed-container {
+           overflow: auto;
+           aspect-ratio: auto;
+           max-height: 90vh;
         }
 
         .main-image {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          transition: transform 0.5s ease-in-out;
+          transform-origin: center center;
         }
 
         .thumbnail-grid {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
@@ -6,6 +6,7 @@ import { canvasArtworks } from '../data';
 
 const ArtworkDetail = () => {
   const { id } = useParams();
+  const [isZoomed, setIsZoomed] = useState(false);
   const artwork = canvasArtworks.find(p => p.id === parseInt(id));
 
   if (!artwork) {
@@ -31,8 +32,17 @@ const ArtworkDetail = () => {
             transition={{ duration: 0.6 }}
             className="artwork-view"
           >
-            <div className="matte-frame">
-              <img src={artwork.image} alt={artwork.title} className="artwork-full" />
+            <div className={`matte-frame ${isZoomed ? 'zoomed-frame' : ''}`}>
+              <img
+                src={artwork.image}
+                alt={artwork.title}
+                className="artwork-full"
+                onClick={() => setIsZoomed(!isZoomed)}
+                style={{
+                  transform: isZoomed ? 'scale(2)' : 'scale(1)',
+                  cursor: isZoomed ? 'zoom-out' : 'zoom-in'
+                }}
+              />
             </div>
           </motion.div>
 
@@ -114,12 +124,21 @@ const ArtworkDetail = () => {
           max-height: 70vh;
           background: white;
           padding: 1rem;
+          overflow: hidden; /* Prevent zoom spillover initially */
+          transition: max-height 0.3s ease;
+        }
+
+        .matte-frame.zoomed-frame {
+          overflow: auto; /* Allow scrolling if needed, or hidden if we just want valid clip */
+          max-height: 90vh;
         }
 
         .artwork-full {
           max-height: calc(70vh - 2rem);
           max-width: 100%;
           display: block;
+          transition: transform 0.5s ease-in-out;
+          transform-origin: center center;
         }
 
         .artwork-info-panel {

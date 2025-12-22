@@ -352,7 +352,7 @@ const Home = () => {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          opacity: 0.1;
+          opacity: 0.8;
           transform: scale(2.5);
           transform-origin: center 75%; /* Focus on lower part (hands/table) */
         }
@@ -783,6 +783,8 @@ const Home = () => {
           text-transform: uppercase;
           letter-spacing: 0.05em;
         }
+
+
       `}</style>
     </div >
   );

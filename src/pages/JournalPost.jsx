@@ -5,63 +5,63 @@ import { journalPosts } from '../data';
 import { ArrowLeft, Share2, Calendar } from 'lucide-react';
 
 const JournalPost = () => {
-    const { slug } = useParams();
-    const post = journalPosts.find(p => p.id === slug);
+  const { slug } = useParams();
+  const post = journalPosts.find(p => p.id === slug);
 
-    if (!post) {
-        return <Navigate to="/" replace />;
-    }
+  if (!post) {
+    return <Navigate to="/" replace />;
+  }
 
-    return (
-        <div className="page-container">
-            <motion.div
-                className="journal-content"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-            >
-                <Link to="/" className="back-link">
-                    <ArrowLeft size={20} /> Back to Home
-                </Link>
+  return (
+    <div className="page-container">
+      <motion.div
+        className="journal-content"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <Link to="/" className="back-link">
+          <ArrowLeft size={20} /> Back to Home
+        </Link>
 
-                <header className="post-header">
-                    <span className="post-date">
-                        <Calendar size={16} /> {post.date}
-                    </span>
-                    <h1 className="post-title">{post.title}</h1>
-                    <div className="post-share">
-                        <button className="share-btn" onClick={() => navigator.clipboard.writeText(window.location.href)}>
-                            <Share2 size={20} /> Share
-                        </button>
-                    </div>
-                </header>
+        <header className="post-header">
+          <span className="post-date">
+            <Calendar size={16} /> {post.date}
+          </span>
+          <h1 className="post-title">{post.title}</h1>
+          <div className="post-share">
+            <button className="share-btn" onClick={() => navigator.clipboard.writeText(window.location.href)}>
+              <Share2 size={20} /> Share
+            </button>
+          </div>
+        </header>
 
-                <div className="post-hero">
-                    <img src={post.image} alt={post.title} loading="lazy" />
+        <div className="post-hero">
+          <img src={post.image} alt={post.title} loading="lazy" />
+        </div>
+
+        <div
+          className="post-body"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
+
+        <div className="post-footer">
+          <h3>More from the Journal</h3>
+          <div className="related-posts">
+            {journalPosts.filter(p => p.id !== slug).slice(0, 2).map(p => (
+              <Link to={`/journal/${p.id}`} key={p.id} className="related-card">
+                <div className="related-image">
+                  <img src={p.image} alt={p.title} />
                 </div>
+                <h4>{p.title}</h4>
+              </Link>
+            ))}
+          </div>
+        </div>
 
-                <div
-                    className="post-body"
-                    dangerouslySetInnerHTML={{ __html: post.content }}
-                />
+      </motion.div>
 
-                <div className="post-footer">
-                    <h3>More from the Journal</h3>
-                    <div className="related-posts">
-                        {journalPosts.filter(p => p.id !== slug).slice(0, 2).map(p => (
-                            <Link to={`/journal/${p.id}`} key={p.id} className="related-card">
-                                <div className="related-image">
-                                    <img src={p.image} alt={p.title} />
-                                </div>
-                                <h4>{p.title}</h4>
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-
-            </motion.div>
-
-            <style jsx>{`
+      <style jsx>{`
         .page-container {
           padding-top: 120px;
           min-height: 100vh;
@@ -211,9 +211,42 @@ const JournalPost = () => {
             grid-template-columns: 1fr;
           }
         }
+
+        /* Gallery Styles injected via innerHTML */
+        :global(.journal-gallery-grid) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1.5rem;
+          margin: 2.5rem 0;
+        }
+
+        :global(.journal-gallery-grid img) {
+          width: 100%;
+          height: 300px;
+          object-fit: cover;
+          border-radius: 4px;
+        }
+
+        :global(.journal-gallery-single) {
+          margin: 2.5rem 0;
+        }
+
+        :global(.journal-gallery-single img) {
+          width: 100%;
+          height: auto;
+          max-height: 500px;
+          object-fit: cover;
+          border-radius: 4px;
+        }
+
+        @media (max-width: 600px) {
+          :global(.journal-gallery-grid) {
+             grid-template-columns: 1fr;
+          }
+        }
       `}</style>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default JournalPost;

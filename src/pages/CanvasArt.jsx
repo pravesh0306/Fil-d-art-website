@@ -114,11 +114,6 @@ const CanvasArt = () => {
                 <Link to={`/canvas-art/${artwork.id}`} className="artwork-link-wrapper">
                   <div className="artwork-image-container">
                     <img src={artwork.image} alt={artwork.title} className="artwork-image" loading="lazy" />
-                    <div className="artwork-overlay">
-                      <span className="artwork-status">
-                        {artwork.available ? 'Available' : 'Sold'}
-                      </span>
-                    </div>
                   </div>
                   <div className="artwork-info text-center">
                     <h3 className="artwork-title">{artwork.title}</h3>
@@ -172,27 +167,18 @@ const CanvasArt = () => {
           position: relative;
           background-color: #f0f0f0;
           box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+          overflow: hidden;
         }
 
         .artwork-image {
           width: 100%;
           height: auto;
           display: block;
+          transition: transform 0.8s ease;
         }
 
-        .artwork-overlay {
-          position: absolute;
-          top: 1rem;
-          right: 1rem;
-        }
-
-        .artwork-status {
-          background-color: white;
-          padding: 0.3rem 0.8rem;
-          font-size: 0.7rem;
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
-          border: 1px solid var(--color-text);
+        .artwork-card:hover .artwork-image {
+          transform: scale(1.2);
         }
 
         .artwork-info {

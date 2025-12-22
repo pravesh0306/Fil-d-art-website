@@ -37,6 +37,21 @@ import canvas7 from './assets/canvas/7.JPG';
 import canvas8 from './assets/canvas/8.png';
 import canvas9 from './assets/canvas/9.jpeg';
 
+// Tom and Jerry Shoe Imports
+import tomJerryMain from './assets/shoe/1/0_main.jpg';
+import tomJerry1 from './assets/shoe/1/1_a.jpeg';
+import tomJerry2 from './assets/shoe/1/1_b.jpeg';
+import tomJerry3 from './assets/shoe/1/1_c.jpeg';
+import tomJerry4 from './assets/shoe/1/1_d.jpeg';
+import tomJerry5 from './assets/shoe/1/1_e.jpeg';
+
+// Exhibition Images
+import exhibitionImg1 from './assets/art exhibition/0c32695a-2f34-4a93-9ef7-f2e390fc5d06.jpg';
+import exhibitionImg2 from './assets/art exhibition/2.jpg';
+import exhibitionImg3 from './assets/art exhibition/4.jpg';
+import exhibitionImg4 from './assets/art exhibition/8f9598e2-363a-4ae5-adaf-ac224d5cd5ab.jpg';
+import exhibitionImgBg from './assets/art exhibition/blog bg.jpg';
+
 export const wearableCategories = [
   { id: 'jackets', name: 'Jackets & Shirts', image: fashion2 },
   { id: 'bags', name: 'Bags', image: fashion7 },
@@ -296,6 +311,18 @@ export const wearableProducts = [
     image: fashion28,
     description: 'A personalized hand-painted wooden keychain featuring a charming portrait of a couple. A perfect keepsake that turns a cherished memory into a portable piece of art.',
     keywords: 'Keychain, Couple Portrait, Gift, Personalized, Small Leather Goods, Romantic'
+  },
+  {
+    id: 29,
+    name: 'Tom and Jerry',
+    category: 'shoes',
+    price: 'Custom',
+    image: tomJerry4,
+    images: [tomJerry4, tomJerryMain, tomJerry1, tomJerry2, tomJerry3, tomJerry5],
+    description: 'Hand-painted high-top sneakers featuring dynamic scenes of the classic Tom & Jerry rivalry. Each pair is a unique work of wearable art on a comfortable grey and white silhouette.',
+    material: 'Lace-up High-Top. Faux Leather Upper, Rubber Sole. Finish: Sealed Acrylic Paint (Water-resistant)',
+    care: 'Spot clean only with a damp cloth. Do not machine wash or submerge. Avoid harsh scrubbing on painted areas.',
+    keywords: 'Shoes, Tom and Jerry, Cartoon, Hand-Painted, Custom Art, Sneakers, Fun, Multi-angle'
   }
 ];
 
@@ -415,20 +442,44 @@ export const journalPosts = [
       <p>I use specialized fabric mediums mixed with high-quality acrylics. Layering is key. Unlike canvas where I might build thick texture, wearable art requires thin, durable layers that won't crack. It's a delicate balance of artistic vision and technical durability.</p>
     `
   },
+
   {
-    id: 'exhibition-notes-2024',
-    title: 'Exhibition Notes 2024',
-    date: 'May 10, 2024',
-    image: 'https://images.unsplash.com/photo-1579783902614-a3fb39279c71?auto=format&fit=crop&q=80&w=800',
-    excerpt: 'Reflections on the latest gallery showcase and the evolving direction of my mixed media work.',
+    id: 'dubai-exhibition-2025',
+    title: 'The Tale of Art Exhibitions',
+    date: 'December 13, 2025',
+    image: exhibitionImgBg,
+    excerpt: 'United in Our Journey - A showcase by International Studio of Art and Galleries (ISOAG) in Dubai.',
     content: `
-      <p>The 2024 exhibition season has been a whirlwind of color and connection. Showcasing my latest collection "Ethereal Silence" allowed me to explore themes of quietude amidst urban chaos.</p>
+      <p><strong>United in Our Journey – Art Exhibition</strong></p>
+      <p><strong>Dubai · 13 December 2025</strong><br />
+      <strong>Organised by International Studio of Art and Galleries (ISOAG)</strong></p>
+
+      <p>This exhibition marked my first-ever participation in an international art exhibition, making it a truly special and memorable evening. Organised by the International Studio of Art and Galleries (ISOAG) in Dubai, the event brought together artists from diverse backgrounds under one unifying theme — “United in Our Journey.”</p>
       
-      <h3>Highlights</h3>
-      <p>Seeing the reactions of visitors as they interacted with the textured pieces was the highlight. The large-scale works were designed to be immersive, inviting viewers to get close and observe the details.</p>
+      <div class="journal-gallery-grid">
+        <img src="${exhibitionImg1}" alt="Exhibition View 1" />
+        <img src="${exhibitionImg2}" alt="Exhibition View 2" />
+      </div>
+
+      <h3>About the Exhibition</h3>
+      <p>The exhibition celebrated artistic unity, cultural exchange, and shared creative journeys. Each artwork reflected personal stories while collectively forming a narrative of connection, growth, and collaboration. The space was filled with meaningful conversations, appreciation for craftsmanship, and a strong sense of community among artists and visitors.</p>
+
+      <h3>My Work on Display</h3>
+      <p>I showcased original hand-painted artworks that reflect my ongoing exploration of identity, emotion, and storytelling through visual form. Alongside canvas artworks, my wearable art pieces bridged the gap between fine art and fashion, allowing art to be experienced beyond gallery walls.</p>
       
-      <h3>What's Next</h3>
-      <p>This exhibition has sparked new ideas for combining my wearable line with my fine art practice. Stay tuned for a collection that blurs these lines even further.</p>
+      <div class="journal-gallery-single">
+         <img src="${exhibitionImg3}" alt="Work on Display" />
+      </div>
+
+      <h3>A Personal Milestone</h3>
+      <p>Participating in this exhibition was a proud milestone in my artistic journey. Being part of such a thoughtfully curated event reaffirmed my belief in art as a powerful medium for connection and expression. It was an inspiring experience that will always hold a special place in my creative path.</p>
+
+      <p>Grateful for the opportunity, the connections, and the shared journey through art.</p>
+      
+      <div class="journal-gallery-grid">
+        <img src="${exhibitionImg4}" alt="Exhibition Moment" />
+        <img src="${exhibitionImgBg}" alt="Exhibition Background" />
+      </div>
     `
   }
 ];
